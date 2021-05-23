@@ -45,5 +45,24 @@ namespace AracKiralam.WebFormsUI
         {
             dgwAracİslemleri.DataSource = manager.GetAll();
         }
+
+        private void btnGüncelle_Click(object sender, EventArgs e)
+        {
+            manager.Update(new Customer
+            {
+                Id = Convert.ToInt32(tbxGuncelleId.Text),
+                Name = tbxGüncelleName.Text,
+                Surname = tbxGüncelleSoıyad.Text,
+                TCKNO = tbxGüncelletckno.Text,
+                Adress = tbxGüncelleAdres.Text
+            });
+            MusteriLoad();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            manager.Delete(new Customer() { Id=Convert.ToInt32( dgwAracİslemleri.CurrentRow.Cells[0].Value)});
+            MusteriLoad();
+        }
     }
 }

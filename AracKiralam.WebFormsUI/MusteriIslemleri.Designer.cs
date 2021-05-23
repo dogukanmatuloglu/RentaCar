@@ -80,6 +80,7 @@ namespace AracKiralam.WebFormsUI
             this.btnSil.TabIndex = 11;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label4
             // 
@@ -136,6 +137,7 @@ namespace AracKiralam.WebFormsUI
             this.btnGüncelle.TabIndex = 10;
             this.btnGüncelle.Text = "Güncelle";
             this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // tbxGüncelleAdres
             // 
